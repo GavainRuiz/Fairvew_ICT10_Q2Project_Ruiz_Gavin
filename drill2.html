@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script><title>ICT Drill 2</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            margin: 0;
+            display: grid;
+            place-items: center;
+            padding: 24px;
+            background: linear-gradient(135deg, #e9eef5, #cbd7e5);
+            color: #243247;
+            font-family: Arial, sans-serif;
+        }
+
+        form {
+            width: min(100%, 380px);
+            padding: 32px;
+            border: 1px solid rgba(255, 255, 255, 0.65);
+            border-radius: 16px;
+            background: rgba(120, 128, 140, 0.22);
+            box-shadow: 0 12px 30px rgba(32, 48, 68, 0.16),
+                        0 2px 8px rgba(32, 48, 68, 0.10);
+            backdrop-filter: blur(8px);
+        }
+
+        input {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid #c3ccd8;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.9);
+            color: #243247;
+            font: inherit;
+        }
+
+        input:focus {
+            outline: 2px solid #6483a8;
+            outline-offset: 2px;
+        }
+
+        button {
+            padding: 11px 20px;
+            border: 0;
+            border-radius: 8px;
+            background: #345779;
+            color: white;
+            font: inherit;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 3px 8px rgba(32, 48, 68, 0.18);
+        }
+
+        button:hover {
+            background: #284764;
+        }
+
+        #output {
+            overflow-wrap: anywhere;
+            line-height: 1.5;
+        }
+
+        body { display: block; padding: 0; color: #172d27; font-family: Arial, Helvetica, sans-serif; background: radial-gradient(ellipse at 50% 0%, #e6eee7 0, #f5f6f1 55%); }
+        .topnav { display: flex; justify-content: center; flex-wrap: wrap; gap: 5px; padding: 18px 20px; }
+        .topnav a { padding: 9px 14px; border-radius: 999px; color: #65756d; font-size: .92rem; text-decoration: none; transition: background .2s, color .2s; }
+        .topnav a:hover, .topnav a:focus-visible { background: #e8eee8; color: #172d27; }
+        .topnav a.active { background: #172d27; color: white; }
+        main { display: grid; min-height: calc(100vh - 66px); place-items: start center; padding: clamp(35px, 9vh, 90px) 20px 60px; }
+        form { width: min(100%, 520px); padding: clamp(28px, 6vw, 48px); border: 1px solid rgb(23 45 39 / 7%); border-radius: 24px; background: rgb(255 255 255 / 92%); box-shadow: 0 24px 70px rgb(28 54 42 / 9%); backdrop-filter: none; }
+        input { border-color: #dce5df; border-radius: 11px; color: #172d27; background: #fbfcfa; }
+        input:focus { outline: 3px solid rgb(38 116 90 / 16%); outline-offset: 0; }
+        button { background: #172d27; box-shadow: none; }
+        button:hover { background: #26745a; }
+    
+    </style>
+</head>
+<body>
+    <nav class="topnav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="skillstest.html">Element Checker</a>
+        <a class="active" href="drill2.html" aria-current="page">School Club Members</a>
+        <a href="creator.html">Meet the Creator</a>
+    </nav>
+    <main>
+    <form>
+        <h1>Dance Club</h1>
+        <div id="Fullname">
+        <input type="text" placeholder="Gavin" id="Fname"> <!--This is to call the first first name "Fname"-->
+        <br><br>
+        <input type="text" placeholder="Ruiz" id="Lname"> <!--This is to call the last first name "Lname"-->
+        </div>
+        <br><br>
+        <button type="button" py-click="new_member">Add Member</button> <!--I use the py-click "new_guy"-->
+        <p id="output"></p> <!--This shows the output from "new_list"-->
+
+    </form>
+    </main>
+    <script type="py" src="main.py"></script> <!--connects the python to the HTML file-->
+    
+</body>
+</html>
